@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.2)
 
 if($ENV{TRAVIS_BUILD_NUMBER})
-    project(allocator VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+    project(Allocator VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 else()
-    project(allocator VERSION 0.0.42)
+    project(Allocator VERSION 0.0.42)
 endif()
 
 configure_file(description.json.in description.json)
@@ -12,24 +12,24 @@ set(INCLUDE_FOLDER ${CMAKE_BINARY_DIR}/../include)
 include_directories(${INCLUDE_FOLDER})
 
 set(SOURCE_FOLDER ${CMAKE_BINARY_DIR}/../source)
-add_executable(allocator ${SOURCE_FOLDER}/main.cpp)
+add_executable(Allocator ${SOURCE_FOLDER}/main.cpp)
 
-set_target_properties(allocator PROPERTIES
+set_target_properties(Allocator PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
 )
 
 if(MSVC)
-    target_compile_options(allocator PRIVATE
+    target_compile_options(Allocator PRIVATE
         /W4
     )
 else()
-    target_compile_options(allocator PRIVATE
+    target_compile_options(Allocator PRIVATE
         -Wall -Wextra -Werror -pedantic
     )
 endif()
 
-install(TARGETS allocator RUNTIME DESTINATION bin)
+install(TARGETS Allocator RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
