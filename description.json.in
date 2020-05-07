@@ -12,7 +12,7 @@
     },
 
     "files":    [{
-        "includePattern":   "/home/travis/build/CEBEP9HUH/OTUS_Homework_3/Allocator-0.0.@PROJECT_VERSION_PATCH@-Linux.deb",
+        "includePattern":   "/home/travis/build/CEBEP9HUH/OTUS_Homework_3/build/Allocator-0.0.@PROJECT_VERSION_PATCH@-Linux.deb",
         "uploadPattern":    "/Allocator-0.0.@PROJECT_VERSION_PATCH@-Linux.deb",
         "matrixParams": {
             "deb_distribution": "trusty",
