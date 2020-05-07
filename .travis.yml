@@ -1,0 +1,12 @@
+language: cpp
+script:
+- mkdir build && cd build
+- cmake ..
+- cmake --build .
+- cmake --build . --target package
+deploy:
+  provider: bintray
+  file: description.json
+  user: $BINTRAY_USER
+  key: $BINTRAY_API_KEY
+  skip_ceanup: true

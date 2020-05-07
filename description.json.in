@@ -1,0 +1,24 @@
+{
+    "package": {
+        "name": "Allocator",
+        "repo": "OTUS_homework",
+        "subject": "cebep9huh",
+        "vcs_url": "https://github.com/CEBEP9HUH/OTUS_Homework_3.git",
+        "licenses": "AFL-2.1"
+    },
+
+    "version":  {
+        "name":         "0.0.@PROJECT_VERSION_PATCH@"
+    },
+
+    "files":    [{
+        "includePattern":   "/home/travis/build/CEBEP9HUH/OTUS_Homework_3/Allocator-0.0.@PROJECT_VERSION_PATCH@-Linux.deb",
+        "uploadPattern":    "/Allocator-0.0.@PROJECT_VERSION_PATCH@-Linux.deb",
+        "matrixParams": {
+            "deb_distribution": "trusty",
+            "deb_component": "main",
+            "deb_architecture": "amd64"
+        }
+    }],
+    "publish": true
+}
