@@ -72,7 +72,7 @@ T* homework_allocator<T, size>::allocate(size_type n)
 
 
 template<typename T, size_t size>
-void homework_allocator<T, size>::deallocate([[maybe_unused]]T* p, [[maybe_unused]]size_type n)
+[[maybe_unused]]void homework_allocator<T, size>::deallocate([[maybe_unused]]T* p, [[maybe_unused]]size_type n)
 {
 
 }
